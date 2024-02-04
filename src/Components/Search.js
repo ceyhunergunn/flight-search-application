@@ -58,7 +58,7 @@ const Search = () => {
     placeholder: (provided) => ({
       ...provided,
       color: "#f1f1f1",
-      fontSize: "0.875rem",
+      fontSize: "18px",
     }),
   };
   const cities = [

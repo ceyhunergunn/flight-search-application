@@ -13,7 +13,7 @@ body {
 }
 .primary-text {
   color: var(--primary-color);
-  font-size: 22px;
+  font-size: 18px;
 }
 .icon-font {
   font-size: 30px;
@@ -44,7 +44,7 @@ body {
   background-repeat: no-repeat;
 }
 .search-area {
-  width: 75%;
+  width: 70%;
   background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(5px);
   border-radius: var(--border-radius);
@@ -63,6 +63,10 @@ body {
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 }
+
+.flight-details {
+  border: 0.2px solid var(--secondary-color);
+}
 /* Date Picker */
 .rmdp-container {
   width: 100%;
@@ -75,6 +79,11 @@ body {
   color: var(--primary-color) !important;
   width: 100%;
 }
+@media (max-width: 992px) {
+  .search-area {
+    width: 90%;
+  }
+}
 /* React Select */
 .css-13cymwt-control {
   height: 3.75rem !important;
@@ -85,7 +94,7 @@ body {
 }
 .css-t3ipsp-control {
   height: 3.75rem !important;
-  border: 0.5px solid rgb(223, 222, 222) !important;
+  border: 0.5px solid #dfdede !important;
   border-radius: 1rem !important;
   background: none !important;
   color: var(--primary-color) !important;

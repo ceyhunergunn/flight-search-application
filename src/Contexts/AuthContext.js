@@ -21,13 +21,9 @@ const AuthContextProvider = (props) => {
   const [arrivalFlights, setArrivalFlights] = useState([]);
   const getDepartureFlights = async (date) => {
     setProcess("loader");
-    url.searchParams.append(
-      "date",
-      date.slice(6, 10) + "-" + date.slice(3, 5) + "-" + date.slice(0, 2)
-    );
+    url.searchParams.append("departureDate", date);
     url.searchParams.append("from", from.value);
     url.searchParams.append("to", to.value);
-
     await fetch(url, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
@@ -55,13 +51,9 @@ const AuthContextProvider = (props) => {
   };
   const getArrivalFlights = async (date) => {
     setProcess("loader");
-    url.searchParams.append(
-      "date",
-      date.slice(6, 10) + "-" + date.slice(3, 5) + "-" + date.slice(0, 2)
-    );
-    url.searchParams.append("from", to.value);
-    url.searchParams.append("to", from.value);
-
+    url.searchParams.set("departureDate", date);
+    url.searchParams.set("from", to.value);
+    url.searchParams.set("to", from.value);
     await fetch(url, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
