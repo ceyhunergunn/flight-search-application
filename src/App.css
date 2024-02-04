@@ -1,0 +1,198 @@
+:root {
+  --border-radius: 16px;
+  --primary-color: #f1f1f1;
+  --secondary-color: #5d91ca;
+  --hover-color: rgba(93, 145, 202, 0.8);
+  --left-position: 200px;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+}
+.primary-text {
+  color: var(--primary-color);
+  font-size: 22px;
+}
+.icon-font {
+  font-size: 30px;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+.icon-font:hover {
+  color: var(--hover-color);
+}
+.btn-search {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  font-size: 24px;
+  height: 50px;
+  width: 50%;
+  border-radius: var(--border-radius);
+}
+.btn-search:hover {
+  background-color: var(--hover-color);
+}
+.main {
+  background: url("./Assets/airplane-bg1.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.search-area {
+  width: 75%;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  border-radius: var(--border-radius);
+  box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.1);
+}
+.list-item {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: var(--border-radius);
+  box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0rem;
+  padding: 1rem;
+}
+.flight-detail {
+  background-color: var(--secondary-color);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+/* Date Picker */
+.rmdp-container {
+  width: 100%;
+}
+.rmdp-input {
+  height: 3.75rem !important;
+  border: 0.5px solid rgb(223, 222, 222) !important;
+  border-radius: 1rem !important;
+  background-color: var(--my-select-bg) !important;
+  color: var(--primary-color) !important;
+  width: 100%;
+}
+/* React Select */
+.css-13cymwt-control {
+  height: 3.75rem !important;
+  border: 0.5px solid rgb(223, 222, 222) !important;
+  border-radius: 1rem !important;
+  background-color: var(--my-select-bg) !important;
+  color: var(--primary-color) !important;
+}
+.css-t3ipsp-control {
+  height: 3.75rem !important;
+  border: 0.5px solid rgb(223, 222, 222) !important;
+  border-radius: 1rem !important;
+  background: none !important;
+  color: var(--primary-color) !important;
+}
+.css-13cymwt-control:hover,
+.css-t3ipsp-control:hover {
+  border: none;
+  box-shadow: none !important;
+}
+.css-13cymwt-control,
+.css-t3ipsp-control {
+  border: none;
+  box-shadow: none !important;
+}
+.css-19bb58m > * {
+  color: var(--primary-color);
+}
+
+.css-166bipr-Input {
+  background-color: var(--my-select-bg) !important;
+  color: var(--primary-color) !important;
+}
+
+.css-3iigni-container,
+.css-16xfy0z-control {
+  height: 3.75rem !important;
+  border: 0.5px solid rgb(223, 222, 222) !important;
+  border-radius: 1rem !important;
+  background-color: var(--my-select-bg) !important;
+  color: var(--primary-color) !important;
+}
+/* Radio Select */
+.radio-inputs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border: 0.2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  height: 3.75rem;
+  background: none;
+  box-sizing: border-box;
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.2);
+  padding: 0.25rem;
+  width: 300px;
+  font-size: 14px;
+}
+
+.radio-inputs .radio {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.radio-inputs .radio input {
+  display: none;
+}
+
+.radio-inputs .radio .name {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  height: 3.25rem;
+  border: none;
+  padding: 0.5rem 0;
+  color: white;
+  transition: all 0.15s ease-in-out;
+}
+
+.radio-inputs .radio input:checked + .name {
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: 600;
+}
+.plane {
+  position: relative;
+  animation: fly 5s infinite;
+}
+@keyframes fly {
+  0% {
+    left: 20px;
+    top: 50px;
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(0deg);
+    left: calc(var(--left-position) - 120px);
+    top: 50px;
+  }
+  50% {
+    transform: rotate(180deg);
+    left: calc(var(--left-position) - 120px);
+    top: 50px;
+  }
+  75% {
+    transform: rotate(180deg);
+  }
+
+  90% {
+    transform: rotate(180deg);
+    left: 20px;
+    top: 50px;
+  }
+  100% {
+    left: 20px;
+    top: 50px;
+  }
+}
