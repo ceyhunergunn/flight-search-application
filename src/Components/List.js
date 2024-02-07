@@ -67,9 +67,8 @@ const List = () => {
   };
   const sortTimeDeparture = () => {
     departureFlights.sort((a, b) => {
-      const timeA = convertFlightTimeToMinutes(a.flightTime);
-      const timeB = convertFlightTimeToMinutes(b.flightTime);
-
+      const timeA = a.departureDate.slice(11, 16);
+      const timeB = b.departureDate.slice(11, 16);
       if (timeA < timeB) {
         return -1;
       }
@@ -81,10 +80,9 @@ const List = () => {
     setDepartureFlights(departureFlights.slice());
   };
   const sortTimeArrival = () => {
-    departureFlights.sort((a, b) => {
-      const timeA = convertFlightTimeToMinutes(a.flightTime);
-      const timeB = convertFlightTimeToMinutes(b.flightTime);
-
+    arrivalFlights.sort((a, b) => {
+      const timeA = a.departureDate.slice(11, 16);
+      const timeB = b.departureDate.slice(11, 16);
       if (timeA < timeB) {
         return -1;
       }
@@ -93,13 +91,10 @@ const List = () => {
       }
       return 0;
     });
+
     setArrivalFlights(arrivalFlights.slice());
   };
 
-  function convertFlightTimeToMinutes(flightTime) {
-    const [hours, minutes] = flightTime.split(" ");
-    return parseInt(hours) * 60 + parseInt(minutes);
-  }
   return (
     <div
       className="search-area p-3"
