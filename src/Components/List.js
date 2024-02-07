@@ -48,7 +48,7 @@ const List = () => {
       }
       return 0;
     });
-    setDepartureFlights(departureFlights);
+    setDepartureFlights(departureFlights.slice());
   };
   const sortPriceArrival = () => {
     arrivalFlights.sort((a, b) => {
@@ -63,7 +63,7 @@ const List = () => {
       }
       return 0;
     });
-    setArrivalFlights(arrivalFlights);
+    setArrivalFlights(arrivalFlights.slice());
   };
   const sortTimeDeparture = () => {
     departureFlights.sort((a, b) => {
@@ -78,7 +78,7 @@ const List = () => {
       }
       return 0;
     });
-    setDepartureFlights(departureFlights);
+    setDepartureFlights(departureFlights.slice());
   };
   const sortTimeArrival = () => {
     departureFlights.sort((a, b) => {
@@ -93,7 +93,7 @@ const List = () => {
       }
       return 0;
     });
-    setArrivalFlights(arrivalFlights);
+    setArrivalFlights(arrivalFlights.slice());
   };
 
   function convertFlightTimeToMinutes(flightTime) {
